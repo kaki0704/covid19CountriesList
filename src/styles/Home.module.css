@@ -1,0 +1,56 @@
+.container {
+  min-height: 100vh;
+  display: grid;
+  margin: auto;
+  grid-template-columns: 1fr;
+}
+
+.headersInfo {
+  display: flex;
+  background-color: rgba(23, 21, 21, 1);
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 0.5rem;
+  height: 5vh;
+}
+
+.headersTitle {
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.countriesWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 20px;
+  height: 90vh;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .headersInfo {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .headersInfo {
+    font-size: 10px;
+    text-align: center;
+  }
+}

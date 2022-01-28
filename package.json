@@ -1,22 +1,40 @@
 {
-  "name": "covidpage",
+  "name": "covid19app",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run lint"
   },
   "dependencies": {
-    "next": "12.0.7",
+    "@types/styled-components": "^5.1.21",
+    "babel-plugin-styled-components": "^2.0.2",
+    "chart.js": "^3.7.0",
+    "dayjs": "^1.10.7",
+    "leaflet": "^1.7.1",
+    "next": "^12.0.9",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-chartjs-2": "^4.0.0",
+    "react-dom": "17.0.2",
+    "react-is": "^17.0.2",
+    "react-leaflet": "^3.2.2",
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
+    "@types/leaflet": "^1.7.7",
     "@types/node": "17.0.5",
     "@types/react": "17.0.38",
+    "@types/react-leaflet": "^2.8.2",
     "eslint": "8.5.0",
     "eslint-config-next": "12.0.7",
-    "typescript": "4.5.4"
+    "typescript": "4.5.4",
+    "gts": "^3.1.0"
   }
 }
