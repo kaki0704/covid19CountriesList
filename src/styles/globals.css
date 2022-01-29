@@ -3,10 +3,10 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-image: url('../../public/earth.jpeg');
+  background-image: linear-gradient(to right bottom,#7C73FF 10%,#03071C 60%);
 
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
 }
 
 a {

@@ -29,7 +29,7 @@ const Home: NextPage<Props> = ({ data, countries }) => {
             return (
               <Link key={country.ID} href={`/${country.Slug}`}>
                 <a>
-                 <CountryCard country={country}/>
+                  <CountryCard country={country} />
                 </a>
               </Link>
             )
