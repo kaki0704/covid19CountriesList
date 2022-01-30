@@ -4,6 +4,16 @@ import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import { Country, Covid19ApiResponse } from '../types'
 import CountryCard from '../components/CountryCard'
+import Image from 'next/image'
+import styled from 'styled-components'
+
+const ObjWrap = styled.div`
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: -1;
+`
 
 type Props = {
   data: any
@@ -19,6 +29,9 @@ const Home: NextPage<Props> = ({ data, countries }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <ObjWrap>
+          <Image layout="fill" src="/earth.jpeg" objectFit="cover" />
+        </ObjWrap>
         <div className={styles.headersInfo}>
           <p>最終更新日: {data.Date.split('T')[0]}</p>
           <p>5000人以下の国: {countries.length}</p>

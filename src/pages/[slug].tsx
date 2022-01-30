@@ -7,6 +7,16 @@ import Link from 'next/link'
 import styles from '../styles/Slug.module.css'
 import dynamic from 'next/dynamic'
 import { countryList } from '../const/countries'
+import styled from 'styled-components'
+import Image from 'next/image'
+
+const ObjWrap = styled.div`
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+`
 
 type Props = {
   country: Country
@@ -25,6 +35,9 @@ const Slug: NextPage<Props> = ({ country, countryMonth }) => {
         <title>{countryName}</title>
         <link rel="icon" href={'https://flagcdn.com/' + country.CountryCode.toLocaleLowerCase() + '.svg'} />
       </Head>
+      <ObjWrap>
+        <Image layout="fill" src="/earth.jpeg" objectFit="cover" />
+      </ObjWrap>
       <div className={styles.banner}>
         <img
           src={'https://flagcdn.com/' + country.CountryCode.toLocaleLowerCase() + '.svg'}
